@@ -1,0 +1,7 @@
+<h2>Create a New Heroine</h2>
+<%= form_for(@heroine) do |f| %>
+  <p> Name: <%= f.text_field :name %>
+  <p> Super Name: <%= f.text_field :super_name %>
+  <p> Power: <%= f.collection_select :power_id, Power.all, :id, :name %>
+  <p><%= f.submit %>
+<% end %>
