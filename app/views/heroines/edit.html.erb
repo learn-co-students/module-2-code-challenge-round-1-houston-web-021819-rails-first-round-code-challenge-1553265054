@@ -1,0 +1,8 @@
+<%=form_for @heroine do |f|%>
+    <p>Name: <%=f.text_field :name%></p>
+    <p>Super Name: <%=f.text_field :super_name%></p>
+    <p>Super Power: <%=f.collection_select :power_id, Power.all, :id, :name%>
+
+    <%=f.submit %>
+
+<%end%>
