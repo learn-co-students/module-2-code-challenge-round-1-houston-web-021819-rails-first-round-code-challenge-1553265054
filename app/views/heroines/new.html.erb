@@ -1,0 +1,10 @@
+<h1> New Heroine Form</h1>
+
+<%= form_for Heroine.new do |f|%>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label :super_name %><br>
+  <%= f.text_field :super_name %><br>
+  <%= f.submit "Create New Heroine" %>
+<% end %>
+
