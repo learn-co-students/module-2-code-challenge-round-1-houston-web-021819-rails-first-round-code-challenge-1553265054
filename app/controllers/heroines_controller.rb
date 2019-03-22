@@ -1,9 +1,9 @@
 class HeroinesController < ApplicationController
   def index
-    @heroines = Heroine.all
-    @superheroines = Heroine.search(params[:search])
-  end
-
+    #@heroines = Heroine.all
+    @superheroines = Heroine.search(params[:search])  
+  end  
+ 
   def show
     @heroine = Heroine.find(params[:id])
   end
@@ -18,7 +18,7 @@ class HeroinesController < ApplicationController
        @heroine.save
        #byebug
        redirect_to heroines_path
-    else
+    else  
       render 'new'
     end
   end
