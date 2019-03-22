@@ -7,13 +7,12 @@ class Heroine < ApplicationRecord
         if search
             power = Power.find_by(name:search)
             if power
-               self.where(power_id: power.id)
+               results = self.where(power_id: power.id)
             else
                 Heroine.all
             end
         end
-    else
-         Heroine.all
+    
     end
 end
   
