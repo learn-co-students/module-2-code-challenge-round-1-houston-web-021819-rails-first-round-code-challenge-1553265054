@@ -10,6 +10,6 @@
     <label>Choose the super power:</label>
     <%= f.collection_select :power_id, Power.all, :id, :name %>
 
-    <% f.submit %>
+    <%= f.submit %>
 <% end%>
     
