@@ -1,6 +1,7 @@
 class HeroinesController < ApplicationController
   def index
     @heroines = Heroine.all
+    @powers = Power.all
   end
 
   def new
@@ -15,7 +16,7 @@ class HeroinesController < ApplicationController
   def show
     @heroine = Heroine.find(params[:id])
     @powers = Power.all
-    #@heroine.power = @powers.select {|p| p.id==}
+   
   end
 
   def heroine_params
