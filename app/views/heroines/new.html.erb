@@ -1,0 +1,19 @@
+<h1>Heroine</h1>
+<%=form_with(model: @heroine) do |form| %>
+<div>
+<%=form.label "Name"%>
+<%=form.text_field :name%>
+
+
+<%=form.label "Super Name"%>
+<%=form.text_field :super_name%>
+
+
+<%=form.label "Power"%>
+<%= form.collection_select(:power_id, Power.all, :id, :name, prompt: true)%>
+
+<%= form.submit %>
+<%end%>
+</div>
+
+</div>
