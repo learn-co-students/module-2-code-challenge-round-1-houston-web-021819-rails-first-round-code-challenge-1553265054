@@ -14,14 +14,11 @@ class HeroinesController < ApplicationController
   end
 
   def create 
-    heroine = heroine.create(heroine_params)
+    heroine = Heroine.create(heroine_params)
     redirect_to heroine
   end
 
   def heroine_params
     params.require(:heroine).permit(:name, :super_name, :power_id)
+    end
   end
-  
-
-
-end

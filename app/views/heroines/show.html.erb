@@ -2,5 +2,5 @@
 <h3> Super Name: </h3>
 <%= @heroine.super_name%>
 <h3> Power: </h3>
-<%= link_to @heroine.power_id, heroine%>
-<% href = "heroines/<%=@heroine.id%>/edit">Edit</a%>
+<%= @heroine.power_id%>
+<a href="/heroines/<%= @heroine.id %>/edit">Edit</a>
